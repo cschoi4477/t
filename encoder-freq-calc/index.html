@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capacitive Encoder Frequency Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob1"></div>
+        <div class="blob blob2"></div>
+    </div>
+    <div class="calculator-card">
+        <div class="header">
+            <h1>Encoder Frequency</h1>
+            <p>Capacitive Encoder Signal Calculator</p>
+        </div>
+        
+        <div class="input-section">
+            <div class="input-group">
+                <label for="sine-periods">Sine Periods per Revolution (N)</label>
+                <div class="input-wrapper">
+                    <input type="number" id="sine-periods" placeholder="e.g. 1024" min="1" step="1">
+                    <span class="unit">cycles/rev</span>
+                </div>
+            </div>
+            
+            <div class="input-group">
+                <label for="speed">Rotation Speed</label>
+                <div class="input-wrapper">
+                    <input type="number" id="speed" placeholder="e.g. 3000" min="0" step="any">
+                    <select id="speed-unit" class="unit-select">
+                        <option value="rpm">RPM</option>
+                        <option value="rps">RPS (Hz)</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="result-section">
+            <p class="result-label">Output Signal Frequency</p>
+            <div class="result-display">
+                <span id="result-hz" class="value">--</span>
+                <span class="unit-large">Hz</span>
+            </div>
+            <div class="result-display secondary">
+                <span id="result-khz" class="value">--</span>
+                <span class="unit-large">kHz</span>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
