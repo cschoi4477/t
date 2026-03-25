@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구구단 대모험!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Start Screen -->
+        <div id="start-screen" class="screen active">
+            <h1 class="title bounce-animation">🌈 구구단 대모험! 🦄</h1>
+            <p class="subtitle">구구단 마스터에 도전해볼까?</p>
+            <button id="start-btn" class="btn primary-btn pulse-animation">게임 시작하기 🚀</button>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="game-screen" class="screen hidden">
+            <div class="top-bar">
+                <div class="score-board">점수: <span id="score">0</span> 🌟</div>
+                <div class="question-tracker">문제: <span id="question-count">1</span>/10</div>
+            </div>
+            
+            <div class="question-container">
+                <div id="question" class="question-text">2 × 3 = ?</div>
+            </div>
+            
+            <div class="options-container" id="options">
+                <!-- Options will be dynamically added here by JS -->
+            </div>
+        </div>
+
+        <!-- Result Screen -->
+        <div id="result-screen" class="screen hidden">
+            <h1 class="title">🎉 게임 끝! 🎉</h1>
+            <p class="final-score-text">내 점수는: <span id="final-score" class="highlight-score">0</span>점!</p>
+            <div id="feedback-message" class="feedback">대단해요! 구구단 마스터! 👑</div>
+            <button id="restart-btn" class="btn primary-btn bounce-animation">다시 도전하기 🔄</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
